@@ -20,16 +20,20 @@ Adding your university email allows you to sign up for github pro, which allows 
 The first thing you are going to want to do is be able to **push** and **pull** code from git to your personal machine or via JupyterHub.
 
 ### Setting up ssh
-	1. In a terminal, type: `ssh-keygen -t ed25519`
-	2. Press `Enter` to accept default values
-	3. This makes a key and puts it in: `~/.ssh/id_ed25519.pub`
-		1. View the file and copy the entire line of text from inside. It should look something like this:
-        ```
-        ssh-ed25519 <string of characters> <email>
-        ```
-	4. On Github, go to Settings --> SSH and GPG Keys --> New SSH Key
-		1. Title it based on where the key lives, for example "PH 364 JupyterHub" or "Personal Laptop"
-		2. Paste the whole line into the Key textbox
+In a terminal, type: `ssh-keygen -t ed25519`
+
+Press `Enter` to accept default values. 
+This makes a key and puts it in: `~/.ssh/id_ed25519.pub`.
+
+View the file and copy the entire line of text from inside. It should look something like this:
+```
+ssh-ed25519 <string of characters> <email>
+```
+On Github, go to Settings --> SSH and GPG Keys --> New SSH Key
+
+Title it based on where the key lives, for example "PH 364 JupyterHub" or "Personal Laptop"
+
+Paste the whole line into the Key textbox
 
 To prepare for the next step, you should now create a new Github project. At the top of the page on github, click the plus icon and then "New Repository". Create a short but memorable name. For now, ignore the configuration options section. 
 
