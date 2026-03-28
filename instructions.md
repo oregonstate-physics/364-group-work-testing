@@ -8,7 +8,7 @@
 > It is also useful for a single person to track changes to a project where parts of the file might be overwritten and the work may need to be recovered at some future point.
 >
 > Github is a public storage unit for git projects, kind of like how Steam is a hub for video games.
-> Github is not the only public storage of this kind! There are other ones with different pros and cons -- for example, Github is now owned by Microsoft, and they use its ubiquity to their advantage by data scraping the repositories hosted there with their AI copilot. 
+> Github is not the only public storage of this kind! There are other ones with different pros and cons -- for example, Github is now owned by Microsoft, and they use its ubiquity to their advantage by data scraping the repositories hosted there with their AI copilot (you can opt out of data scraping in your GitHub settings). 
 > Other platforms include public sites like Gitlab and Codeberg, or you can host your own using something like Gogs or Gitea.
 > There are several things you can do via Github that cannot be accomplished using git alone, such as kanban boards, web hosting, wikis, and more. 
 > That doesn't mean that github replaces git! It is just another tool to make collaboration among groups of people easier.
@@ -25,7 +25,9 @@ In a terminal, type: `ssh-keygen -t ed25519`
 Press `Enter` to accept default values. 
 This makes a key and puts it in: `~/.ssh/id_ed25519.pub`.
 
-View the file and copy the entire line of text from inside. It should look something like this:
+View the file. You can do in several different ways, including the `cat` command, for example: `cat ~/.ssh/id_ed25519.pub`
+
+Copy the entire line of text from your file. It should look something like this. 
 ```
 ssh-ed25519 <string of characters> <email>
 ```
@@ -33,9 +35,11 @@ On Github, go to Settings --> SSH and GPG Keys --> New SSH Key
 
 Title it based on where the key lives, for example "PH 364 JupyterHub" or "Personal Laptop"
 
-Paste the whole line into the Key textbox
+Paste the whole line into the Key textbox.
 
-To prepare for the next step, you should now create a new Github project. At the top of the page on github, click the plus icon and then "New Repository". Create a short but memorable name. For now, ignore the configuration options section. 
+<!-- This is where we want students to get to on the first day of class. -->
+
+To prepare for the next step, you should now create a new Github repository. At the top of the page on github, click the plus icon and then "New Repository". Create a short but memorable name. For now, ignore the configuration options section. 
 
 >[!IMPORTANT]
 > By default, Github makes repositories **public**. Do not put any information in a public repository that you do not want other people to see, including private keys, personal emails, or anything you do not want linked to yourself.
@@ -74,12 +78,14 @@ The `user.email` field will also be public. Your github account by default creat
 00000001+<username>@users.noreply@github.com
 ```
 
+<!-- I don't think I had to do this on JH, I think JH placed these in the config file for me.
 So that you only have to do this once, run 
 ```
 git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
 ```
 To set your account's default identity. This will set your credentials for every future repository you create.
+-->
 
 Now we can link our local repository to github by adding a remote repository. This is where you will link your local git to the repository you created earlier.
 ```
@@ -98,6 +104,7 @@ git push
 ```
 Git will then yell at you. That's ok. It says what you should do: set your *upstream* to the remote you just linked. Let's try again:
 
+<!-- why do this instead of `git branch -M main`?-->
 ```
 git push --set-upstream origin main
 ```
