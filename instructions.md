@@ -1,7 +1,8 @@
 # Introduction to Repositories
 ## What is a Repository?
 
-> [!NOTE] Aside: Git and Github are two different things!
+> [!NOTE]
+> **Aside**: Git and Github are two different things!
 > Git is a version control system created by Linus Torvalds (the creator of Linux) that tracks changes in files through a data storage system called a *directed acyclic graph*. 
 > Git is extremely useful when a group of people are making changes to the same files at the same time. 
 > It is also useful for a single person to track changes to a project where parts of the file might be overwritten and the work may need to be recovered at some future point.
