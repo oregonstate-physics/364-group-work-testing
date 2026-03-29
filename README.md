@@ -64,21 +64,36 @@ def foo(bar):
     """This is a docstring.
 
     It can be spread over several lines.
-    The first line should start with a verb and explain concisely what the 
+    """
+    return bar**2
+
+```
+
+There are several parts of a function that are important to legibility and good communication. 
+The given example can be improved in a couple of different ways. 
+The first is the function and variable names `foo` and `bar`. 
+This should be a bit more descriptive of what is actually happening. 
+Remember that naming things well doesn't cost anything and is only helpful!
+
+```python
+def squared(number): 
+    """This is a docstring.
+
+    It can be spread over several lines.
+    The first line should start with a verb and explain concisely what the
     function does. The rest of the docstring should describe what the 
     function does in more detail if necessary.
 
     Parameters
     ----------
-    bar : int 
-        Description of `bar`.
+    number : int 
+        Description of `number`.
 
     Returns
     -------
-    bar^2 : int
-        Description of `bar^2`.
+    number^2 : int
+        Description of `number^2`.
 
     """
-    return bar**2
-
+    return number**2 
 ```
