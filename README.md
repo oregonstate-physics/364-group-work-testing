@@ -26,7 +26,7 @@ You should take some time to familiarize yourself with these websites that expla
 * https://git-scm.com/
 * https://docs.github.com/en/get-started/git-basics
 * https://jupyter-notebook.readthedocs.io/en/latest/
-* 
+* https://docs.github.com/en/get-started/start-your-journey
 
 ## Effective Software Development Practices
 One of the most important things you should internalize as a scientific software developer is that *you are in control of the knowledge*. 
