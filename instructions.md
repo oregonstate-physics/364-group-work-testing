@@ -14,12 +14,12 @@
 > That doesn't mean that github replaces git! It is just another tool to make collaboration among groups of people easier.
 
 ## Creating Github Account
-The first thing you will need to do is set up an account with [github](https://github.com). Github is the "industry standard" public repository for code, and allows both users and public viewers to download, execute, and run projects. 
+The first thing you will need to do is set up an account with [Github](https://github.com). Github is the "industry standard" public repository for code, and allows both users and public viewers to download, execute, and run projects. 
 It is a good idea to set this account up with your private email first, and add your university email as a secondary email later, that way you can manage your github account after you leave. 
 Adding your university email allows you to sign up for github pro, which allows you to make use of more storage and better collaboration tools.
 The first thing you are going to want to do is be able to **push** and **pull** code from git to your personal machine or via JupyterHub.
 
-### Setting up ssh
+### Setting Up `ssh`
 In a terminal, type: `ssh-keygen -t ed25519`
 
 Press `Enter` to accept default values. 
@@ -29,7 +29,7 @@ View the file. You can do in several different ways, including the `cat` command
 
 Copy the entire line of text from your file. It should look something like this. 
 ```
-ssh-ed25519 <string of characters> <email>
+ssh-ed25519 <string of characters> <JHUser>
 ```
 On Github, go to Settings --> SSH and GPG Keys --> New SSH Key
 
@@ -78,14 +78,18 @@ The `user.email` field will also be public. Your github account by default creat
 00000001+<username>@users.noreply@github.com
 ```
 
-<!-- I don't think I had to do this on JH, I think JH placed these in the config file for me.
-So that you only have to do this once, run 
+So that you only have to do this once, set your name and email using the `--global` tag 
 ```
 git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
+git config --global user.name "Your Name"
 ```
 To set your account's default identity. This will set your credentials for every future repository you create.
--->
+
+Because we are in JupyterHub and the servers are several updates behind, we will need to set some defaults to have a smoother connection with Github. We will want to define our default branch to be `main`:
+```
+git config --global init.defaultBranch main
+```
+If you need to change these in the future, you can run these commands again, or edit them directly in `~/.gitconfig`.
 
 Now we can link our local repository to github by adding a remote repository. This is where you will link your local git to the repository you created earlier.
 ```
@@ -106,7 +110,6 @@ git push
 ```
 Git will then yell at you. That's ok. It says what you should do: set your *upstream* to the remote you just linked. Let's try again:
 
-<!-- why do this instead of `git branch -M main`?-->
 ```
 git push --set-upstream origin main
 ```
