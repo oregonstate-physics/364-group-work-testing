@@ -4,9 +4,12 @@
 Welcome to PH 364! 
 
 ## Table of Contents
-[Setting Up Your Laptop](#Setting Up Your Laptop)
-[Class Resources](#Class Resources)
-[Effective Software Development Practices](#Effective Software Development Practices)
+1. [Introduction](#introduction)
+2. [Setting Up Your Laptop](#setting-up-your-laptop)
+3. [Class Resources](#class-resources)
+4. [Effective Software Development Practices](#effective-software-development-practices)
+
+## Introduction
 
 ## Setting Up Your Laptop
 For the majority of the class, assignments will be via JupyterHub. 
@@ -28,8 +31,11 @@ You should take some time to familiarize yourself with these websites that expla
 ## Effective Software Development Practices
 One of the most important things you should internalize as a scientific software developer is that *you are in control of the knowledge*. 
 Just as you may have been confused and frustrated by poor documentation in the past, people who may use your software will be confused and frustrated with your lack of communication. 
+
 There are several style guides that you can follow as a software developer. The most important thing is that you choose one and *stick with it*. The preferred style for this class is the [Numpy Style](https://numpydoc.readthedocs.io/en/latest/format.html). This is the style of choice for a large portion of scientific software packages. 
+
 As you grow to write effective documentation inside your code, you will notice that the effort you give will pay off in dividends: IDEs like VSCode will automatically format and provide real time context of your functions based on your docstrings, and people can pick up from where you left off with little to no person-to-person training.
+
 #### Anatomy of a function
 A python function has several parts to it. Good documentation should be as concise as possible without leaving out any detail.
 See the following example:
