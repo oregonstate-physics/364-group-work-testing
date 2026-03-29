@@ -91,6 +91,8 @@ Now we can link our local repository to github by adding a remote repository. Th
 ```
 git remote add origin git@github.com:<user>/<repository>.git
 ```
+You can also copy the URL directly if you click the green "Code" button on your GitHub repository page.
+
 This will add a remote to the git repository, which you can now send changes to (push) and receive changes from (pull).
 You can add several remotes to a project, when you might want to mirror your changes to several different repositories.
 
