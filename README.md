@@ -12,7 +12,7 @@ Welcome to PH 364!
 ## Introduction
 
 ## Setting Up Your Laptop
-For the majority of the class, assignments will be via JupyterHub. 
+For the majority of the class, assignments will be via JupyterHub. If you would like to learn more, these are the ways you can  
 ### Windows
 The default experience of coding on Windows is downright abysmal. 
 This is why the omniscient developers at ~Microslop~ Microsoft have decided that the best way to develop on windows is to use Linux. Specifically, the Windows Subsystem for Linux (WSL). 
@@ -44,6 +44,7 @@ You should take some time to familiarize yourself with these websites that expla
 * https://docs.github.com/en/get-started/git-basics
 * https://jupyter-notebook.readthedocs.io/en/latest/
 * https://docs.github.com/en/get-started/start-your-journey
+* https://realpython.com/
 
 ## Effective Software Development Practices
 One of the most important things you should internalize as a scientific software developer is that *you are in control of the knowledge*. 
@@ -54,7 +55,7 @@ There are several style guides that you can follow as a software developer. The 
 As you grow to write effective documentation inside your code, you will notice that the effort you give will pay off in dividends: IDEs like VSCode will automatically format and provide real time context of your functions based on your docstrings, and people can pick up from where you left off with little to no person-to-person training.
 
 > [!IMPORTANT]
-> AI is not particularly good at writing documentation, especailly for advanced functions. Use a template and fill it out yourself.
+> AI is not particularly good at writing documentation, especially for advanced functions. Use a template and fill it out yourself.
 
 #### Anatomy of a function
 A python function has several parts to it. Good documentation should be as concise as possible without leaving out any detail.
